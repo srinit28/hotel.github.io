@@ -28,5 +28,5 @@ jobs:
       - name: Push Build to Releases
         uses: actions/checkout@master
         with:
-          artifacts: "dist/angular-githubaction/*"
+          ref: ${{ github.head_ref }}
           token: ${{ secrets.TOKEN }}
